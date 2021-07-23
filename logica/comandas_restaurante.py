@@ -100,6 +100,14 @@ Resultado:
 
 #tentativa TEST 4
 
+def processinput(input):
+    C = input()
+    D = input()
+    for x in range(1, D):
+        print(x)
+    return input()
+processinput(input)
+'''
 C = int(input())# input
 D = int(input()) # input
 entrada = input().split() # input
@@ -118,7 +126,7 @@ soma = b + e + s + p
 print(soma)
 print(int(p / C))
 print(e + b + s)
-
+'''
 
 
 

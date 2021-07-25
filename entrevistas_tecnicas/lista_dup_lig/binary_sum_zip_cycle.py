@@ -1,9 +1,17 @@
 from collections import deque
-from itertools import zip_longest
+from itertools import chain, cycle
 
 
 def less_to_great_significant_digit(s):
     return map(int, reversed(s))
+
+
+def zip_longest(n, n2, fillvalue):
+    n = list(n)
+    n2 = list(n2)
+    minor, greater = sorted([n, n2], key=len)
+    minor_with_fillvalues = chain(minor, cycle([fillvalue]))
+    return zip(greater, minor_with_fillvalues)
 
 
 def binary_sum(n, n2):

@@ -71,44 +71,24 @@ Saída:
 30 0 15 20 30 10 10 15 20 0
 2
 1 40'''
-V = [30, 0, 15, 20, 30, 10, 10, 15, 20, 0]
-V_set = list(set(V))
-C = [1,40]
+n = int(input())
+
+V = input().split()
+nc = int(input())
+C = input().split()
+x = V + C
+xset = sorted(list(set(x)), reverse=True)
+print(x)
+print(xset)
+if [C] in xset:
+    print(xset.index(C) + 1)
+
+
+#V = [30, 0, 15, 20, 30, 10, 10, 15, 20, 0]
+#V_set = list(set(V))
+#C = [1,40]
 #saida2
-print(len(V))
-print(*V)
-print(len(C))
-print(*C)
-'''#exercício2
-x = 0
-for x in range(len(C)):
-    def codigo(x):
-        V_set.append(C[x])
-        V_set.sort(reverse=True)
-        return V_set.index(C[x]) + 1
-print(codigo(0))
-V_set.pop(V_set.index(C[0]))
-print(codigo(1))
-'''
-
-
-'''while x < len(C):
-    x -= 1
-    def code(x):
-        V_set.append(C[x])
-        V_set.sort(reverse=True)
-        return V_set.index(C[x]) + 1
-    print(code(0))'''
-
-'''
-def code(x):
-    V_set.append(C[x])
-    V_set.sort(reverse=True)
-    return V_set.index(C[x]) + 1
-
-print(code(0))
-V_set.pop(V_set.index(C[0]))
-print(code(1))
-print(code(2))
-
-'''
+#print(len(V))
+#print(*V)
+#print(len(C))
+#print(*C)

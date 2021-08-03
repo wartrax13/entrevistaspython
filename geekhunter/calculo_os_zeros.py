@@ -27,7 +27,6 @@ n = int(input())
 for i in range(n):
     x = [int(x) for x in input().split(' ')]
     a, b = x
-    lista = []
     q = ''
     for z in range(a, b+1):
         q += str(z)
